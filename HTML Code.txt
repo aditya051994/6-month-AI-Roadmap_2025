@@ -1,0 +1,73 @@
+-- Callback 
+
+ function sayHello() {
+        console.log("Hello");
+      }
+
+      function add(a, b , callback) {
+        callback(); //Calling function
+        console.log(a + b);        
+      }
+
+      function sayHi()
+      {
+        console.log("Hi");
+      }
+
+      let a = 100;
+      let b = 200;
+      add(a, b ,sayHello);
+      add(a,b,sayHi);
+
+
+-- class and Object
+
+ class parentClass
+    {
+      constructor(n) // Constructor
+      {
+        this.name=n;
+        console.log(this.name);
+      }
+
+
+      // add(a,b) //function
+      // {
+      //   console.log(a+b);
+      // }
+
+      // static Sum(a,b)
+      // {
+      //   console.log(a+b);        
+      // }
+
+    }
+
+    let Obj=new parentClass("Akash");
+    console.log(Obj);
+    //Obj.add(10,10) // Calling of function
+    //parentClass.Sum(100,100); // Call static method
+
+-- Inheritance 
+
+class employee { // Parent Class
+      constructor() {
+        console.log("This is Parent Class");
+      }
+      display() {
+        console.log("This is my display function");
+      }
+
+    }
+    class Manager extends employee { // Child Class
+      show() {
+        super.display();
+        console.log("This is show function");
+      }
+
+    }
+
+    let Obj = new Manager();
+    Obj.show();
+    //Obj.display();
+
